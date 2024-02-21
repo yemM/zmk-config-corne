@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    retro-tap;
+    quick-tap-ms = <0>;
+};
+
 / {
     macros {
         grave: grave {
