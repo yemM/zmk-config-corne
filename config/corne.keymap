@@ -28,6 +28,34 @@
             bindings = <&kp SQT &kp SPACE>;
             label = "QUOTE";
         };
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3>;
+            label = "QUOTE";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3>;
+            label = "QUOTE";
+        };
+
+        bt2: bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3>;
+            label = "QUOTE";
+        };
+
+        bt3: bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2>;
+            label = "QUOTE";
+        };
     };
 
     keymap {
@@ -82,7 +110,7 @@
             bindings = <
 &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &none   &none     &none       &none          &kp C_VOL_DN   &kp K_MUTE     &kp C_VOL_UP   &none
 &none  &none           &none             &none       &none   &none     &none       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &trans
-&none  &none           &none             &none       &none   &none     &bt BT_CLR  &bt0           &bt1           &bt2   &bt BT_SEL 3   &trans
+&none  &none           &none             &none       &none   &none     &bt BT_CLR  &bt0           &bt1           &bt2   &bt3   &trans
                                          &trans      &tog 1  &trans    &trans      &trans         &trans
             >;
         };
